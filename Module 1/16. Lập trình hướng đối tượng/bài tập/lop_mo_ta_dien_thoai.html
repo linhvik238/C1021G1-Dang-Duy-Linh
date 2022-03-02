@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(battery, name, status) {
+            this.battery = battery;
+            this.name = name;
+            this.draft = "";
+            this.inbox = [];
+            this.sent = [];
+            this.status = status;
+        }
+    checkPhoneStatus (){
+        if (this.status == "on") {
+            console.log (this.name + "The phone is on")
+        } else if (this.status == "off") {
+            console.log (this.name + "The phone is off");
+        }
+    }
+
+    reduceBattery () {
+            this.battery -= 1;
+    }
+    phoneTurnOn () {
+        return this.status = ("on")
+        this.reduceBattery();
+
+    }
+
+    phoneTurnOff () {
+        return this.status = ("off");
+        this.reduceBattery();
+    }
+
+    phoneCharging () {
+        for (let i = 0; i < 100; i++) {
+            this.battery += 1;
+            if (this.battery == 100) {
+                break;
+            }
+        }
+    }
+    draftMessage () {
+        if (this.status = "on") {
+            let message = prompt("Type in your message: ");
+            this.draft = message;
+            let sending = confirm ("Do you want to send this message?");
+            if (sending) {
+                let receiver = prompt ("Receiver name: ")
+                this.sendMessage(receiver, message)
+            }
+        } else
+            alert("Please turn on your phone");
+            this.reduceBattery();
+    }
+
+    sendMessage (receiver, message) {
+        if (this.status = "on") {
+            receiver.inbox.push ([this, message]);
+            this.sent.push([receiver, message]);
+        } else
+            alert ("Please turn on your phone");
+        this.reduceBattery();
+    }
+
+    checkInbox () {
+        if (this.status = "on") {
+            this.inbox.forEach(function(value, index) {
+                index= parseInt(index + "") + 1;
+                document.write("inbox " + index + " from: " + value[0].name + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                    "content: " + value[1]+"<br>");
+            })
+        } else
+            alert ("Please turn on your phone");
+        this.reduceBattery();
+    }
+
+    checkSent () {
+        if (this.status = "on") {
+            this.inbox.forEach(function(value, index) {
+                index= parseInt(index + "") + 1;
+                document.write("inbox " + index + " from: " + value[0].name + "<br>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                    "content: " + value[1]+"<br>");
+            })
+        } else
+            alert ("Please turn on your phone");
+        this.reduceBattery();
+        }
+    }
+
+    let nokia = new Mobile(100, "Nokia", "off")
+    let iphone = new Mobile(99, "Iphone", "on")
+    nokia.phoneTurnOn();
+    nokia.sendMessage(iphone, "Hey bro");
+    nokia.sendMessage(iphone, "What are you doing?");
+    iphone.sendMessage(nokia, "I am chatting with you")
+    nokia.checkSent();
+    iphone.checkInbox();
+    nokia.phoneCharging();
+    iphone.phoneCharging();
+    console.log(nokia);
+    console.log(iphone);
+
+
+
+</script>
+</body>
+</html>

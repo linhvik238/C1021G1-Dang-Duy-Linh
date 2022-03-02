@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<h1><input id="sonhapvao" onclick="choi()" type="button" value="Chơi"></h1>
+<script>
+function choi(){
+    let a = parseInt(prompt("Nhập vào khoảng mà bạn muốn đoán"));
+    console.log(a);
+    let songaunhien = Math.random(Math.round) * a;
+    console.log(Math.round(songaunhien));
+    let sodoan = parseInt(prompt("Nhập vào số mà bạn muốn đoán:"));
+    let dem = 1;
+    do {
+        if (songaunhien==sodoan){
+            alert("Congratulation!")
+        } else if (songaunhien<sodoan) {
+            alert("Số bạn đoán lớn hơn rồi!");
+            let sodoan = parseInt(prompt("Nhập vào số mà bạn muốn đoán:"));
+            dem++;
+        } else {
+            alert("Số bạn đoán nhỏ hơn rồi!");
+            let sodoan = parseInt(prompt("Nhập vào số mà bạn muốn đoán:"));
+            dem++;
+        }
+    } while(dem<3);
+}
+</script>
+</body>
+</html>

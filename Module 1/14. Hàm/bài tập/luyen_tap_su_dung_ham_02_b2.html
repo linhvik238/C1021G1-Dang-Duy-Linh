@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm 01- b2</title>
+</head>
+<body>
+<script>
+    function circleArea(Number){
+        return S = Number * Number * Math.PI;
+    }
+
+    function circleCircuit(Number){
+        return C = 2 * Number * Math.PI;
+    }
+
+    let r = parseInt(prompt("Nhập vào bán kính hình tròn: "));
+    let dientich = circleArea(r);
+    let chuvi = circleCircuit(r);
+    document.write("Diện tích hình tròn với bán kính " + r + " là: " + dientich + "</br>");
+    document.write("Chu vi hình tròn với bán kính " + r + " là: " + chuvi);
+</script>
+</body>
+</html>

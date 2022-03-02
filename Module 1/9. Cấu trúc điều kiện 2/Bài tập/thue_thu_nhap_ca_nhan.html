@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let thunhaptinhthue = parseInt(prompt("Nhập vào thu nhập của bạn: "));
+    if (thunhaptinhthue <= 5000000) {
+        thuephainop = thunhaptinhthue * 0.05;
+    } else if (thunhaptinhthue <=10000000) {
+        thuephainop = thunhaptinhthue * 0.1 - 250000;
+    } else if (thunhaptinhthue <= 18000000) {
+        thuephainop = thunhaptinhthue * 0.15 - 750000;
+    } else if (thunhaptinhthue <= 32000000) {
+        thuephainop = thunhaptinhthue * 0.2 - 1650000;
+    } else if (thunhaptinhthue <= 52000000) {
+        thuephainop = thunhaptinhthue * 0.25 - 3250000;
+    } else if (thunhaptinhthue <= 80000000) {
+        thuephainop = thunhaptinhthue * 0.3 - 5850000;
+    } else {
+        thuephainop = thunhaptinhthue * 0.35 - 9850000;
+    }
+    alert(thuephainop);
+</script>
+</body>
+</html>

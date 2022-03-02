@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm và thay thế - bằng _ </title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào độ dài của mảng"));
+    let arr = new Array (n);
+    for (i = 0; i < arr.length; i++){
+        arr[i] = prompt("Nhập vào phần tử vị trí: " + i);
+    }
+    document.write("before " + arr.join(' ') + "</br>");
+    for (let i = 0; i< arr.length; i++) {
+        if (arr[i] === "-"){
+            arr[i] = "_";
+        }
+    }
+    document.write("after " + arr.join(' '));
+</script>
+</body>
+</html>

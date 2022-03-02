@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let person = { person:['eyes'] = 'hazel',
+        name: {
+            first: 'Bob',
+            last: 'Smith'
+        },
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+
+        bio: function () {
+            alert(person.name.first + ' ' + person.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },
+        greeting: function () {
+            alert('Hi! I\'m ' + name.first + name.last + '.');
+        },
+        person: farewell = function () {
+            alert("Bye everybody!");
+        },
+    }
+    person.bio();
+    person.age = 45;
+    person['name']['last'] = 'Cratchit';
+    person.interests[1];
+    person.bio();
+    person['eyes']
+    person.farewell()
+
+</script>
+</body>
+</html>

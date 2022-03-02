@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 4 bài 2</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập chuỗi ký tự");
+    let strNew = "";
+    strNew = str[0];
+    for (let i = 1; i < str.length; i++) {
+        for (let j = 0; j < strNew.length;) {
+            if (strNew.includes(str[i])) {
+                j++
+            } else {
+                strNew = strNew + str[i];
+                break;
+            }
+        }
+    }
+    alert("Có " + strNew.length + "kí tự khác nhau là " + strNew);
+</script>
+</body>
+</html>

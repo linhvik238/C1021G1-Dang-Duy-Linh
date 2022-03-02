@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính thuế và lương ròng</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Please enter your salary: "));
+    let tax, netSalary;
+    if (salary >= 15000000) {
+        tax = salary * 0.2;
+        netSalary = salary - tax;
+        document.write("Your net Salary is: " + netSalary);
+    } else if (salary >= 7000000) {
+        tax = salary * 0.1;
+        netSalary = salary - tax;
+        document.write("Your net Salary is: " + netSalary);
+    } else if (salary < 7000000) {
+        tax = salary * 0.05;
+        netSalary = salary - tax;
+        document.write("Your net Salary is: " + netSalary);
+    }
+</script>
+</body>
+</html>

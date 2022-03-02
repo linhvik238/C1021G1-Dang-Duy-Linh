@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: white;
+    border: 3px solid whitesmoke;
+}
+
+.left-menu {
+    width: 25%;
+    float: left;
+}
+
+.main {
+    width: 50%;
+    float: left;
+}
+
+.right-menu {
+
+    width: 25%;
+    float: left;
+}
+
+.fb-icon {
+    width: 50px;
+    border-radius: 30px;
+    position: relative;
+    left: 10px;
+}
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    background: lightgrey;
+    border-radius: 30px;
+    position: relative;
+    left: 30px;
+    width: 250px;
+    height: 50px;
+}
+
+.home-icon, .play-icon, .market-icon, .group-icon, .game-icon, .friend, .clock {
+    width: 50px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.main .icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ava, .menu, .mess, .notification, .arrow {
+    width: 50px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.word {
+    color: Black;
+    font-size: 26px;
+}
+
+.right-menu .icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    margin-top: 0px;
+    background: floralwhite;
+}
+
+.word {
+    vertical-align: sub;
+}
+
+.story, .chat {
+
+    width: 100%;
+    height: auto;
+}
+
+
+

@@ -1,0 +1,17 @@
+BEGIN 
+	INPUT mark
+	mark trong khoảng từ 1-100
+	Do
+		If mark < 35
+		Display "Loại E"
+			Else If 35 <= mark & mark < 45
+			Display "Loại D"
+				Else If 45 <= mark & mark < 60
+				Display "Loại C"
+					Else If 60 <= mark & mark < 75
+					Display "Loại B"
+						Else If mark => 75
+						Display "Loại A"
+	End Do
+End
+				

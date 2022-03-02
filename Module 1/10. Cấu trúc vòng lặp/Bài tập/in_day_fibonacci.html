@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+<script>
+    let s1 = 0;
+    let s2 = 1;
+    let result = s1 + "," + s2;
+    let temp;
+    for (i=0; i<20; i++){
+        temp = s1 + s2;
+        s1 = s2;
+        s2 = temp;
+        result += "," + s2;
+    } console.log(result);
+</script>
+</body>
+</html>

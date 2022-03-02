@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập nhiệt độ phòng, yêu cầu tăng giảm nhiệt độ</title>
+</head>
+<body>
+<script>
+    let nhietdo=parseInt(prompt("Nhập nhiệt độ phòng: "));
+    do {
+        if (nhietdo > 100) {
+            let nhietdo = parseInt(prompt("Giảm nhiệt độ phòng: "));
+        } else if (nhietdo < 20) {
+            let nhietdo = parseInt(prompt("Tăng nhiệt độ phòng: "));
+        }
+    }
+            while (20 > nhietdo && nhietdo > 100);
+</script>
+</body>
+</html>

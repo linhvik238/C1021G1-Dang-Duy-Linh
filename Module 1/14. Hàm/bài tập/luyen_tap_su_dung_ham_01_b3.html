@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 01 - b3</title>
+</head>
+<body>
+    <button onclick="soSanh()" type="button">So Sánh 2 số</button>
+<script>
+    function soSanh(a,b){
+        let n = parseInt(prompt("Nhập vào số thứ nhất: "));
+        let m = parseInt(prompt("Nhập vào số thứ hai: "));
+        document.write ("số mới nhập vào là: " + n + " và " + m +"</br>");
+        if (n>m){
+            alert ("Số thứ nhất lớn hơn số thứ hai");
+        } else {
+            document.write ("tổng của " + n + " và " + m + " là: " + (n + m));
+            return n+m;
+        }
+    }
+</script>
+</body>
+</html>

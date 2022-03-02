@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính tiền điện</title>
+</head>
+<body>
+<script>
+    let diennangtieuthu = parseInt(prompt("Nhập vào lượng điện năng tiêu thụ trong tháng: "));
+    if (diennangtieuthu <= 50) {
+        tiendien = diennangtieuthu * 1484;
+    } else if (diennangtieuthu <= 100) {
+        tiendien = (50 * 1484) + (diennangtieuthu - 50) * 1533;
+    } else if (diennangtieuthu <= 200) {
+        tiendien = (50 * 1484) + (50 * 1533) + (diennangtieuthu - 100) * 1786;
+    } else if (diennangtieuthu <= 300) {
+        tiendien = (50 * 1484) + (50 * 1533) + (100 * 1786) + (diennangtieuthu - 200) * 2242;
+    } else if (diennangtieuthu <= 400) {
+        tiendien = (50 * 1484) + (50 * 1533) + (100 * 1786) + (100 * 2242) + (diennangtieuthu - 300) * 2503;
+    } else {
+        tiendien = (50 * 1484) + (50 * 1533) + (100 * 1786) + (100 * 2242) + (100 * 2503) + (diennangtieuthu - 400) * 2587;
+    }
+    alert(tiendien + " VND");
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào độ dài mảng a: "));
+    let a = new Array(n);
+    let b = [];
+    let sum = 0;
+    for (let i=0; i<a.length; i++){
+        a[i] = parseInt(prompt("Nhập vào phần tử vị trí: " + i));
+        sum = sum + a[i];
+        b.push(sum);
+    }
+    alert(b);
+</script>
+</body>
+</html>

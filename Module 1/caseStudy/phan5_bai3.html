@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 5 bài 3</title>
+</head>
+<body>
+<script>
+    let array = [
+        [2,3,5,7,10,12,13,16,29,30],
+        [15,20,31,40,45,27,50,55]
+    ];
+    console.log(array);
+    function findMin(array){
+        let min = array[0][0];
+        for (let i = 0; i<array.length; i++) {
+            for (let j = 0; j<array[i].length; j++){
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
+    function findMax(array){
+        let max = array[0][0];
+        for (let i = 0; i<array.length; i++) {
+            for (let j = 0; j<array[i].length; j++){
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+        }
+        return max;
+    }
+    document.write("The min value of the 2D-array is: " + findMin(array) + "</br>");
+    document.write("The max value of the 2D-array is: " + findMax(array));
+</script>
+</body>
+</html>

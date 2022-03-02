@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 3 bài 3</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Length of numerators: "));
+    let m = parseInt(prompt("Length of denominators: "));
+    let numerators = new Array(n);
+    let denominators = new Array(m);
+    let index;
+    for (let i = 0; i < n; i++) {
+        numerators[i] = parseInt(prompt("Please input the element of position: " + i));
+    }
+    document.write("Numerators: " + "[" + numerators + "]" + "</br>");
+
+    for (let i = 0; i < m; i++) {
+        denominators[i] = parseInt(prompt("Please input the element of position: " + i));
+    }
+    document.write("Denominators: " + "[" + denominators + "]" + "</br>");
+    let max = numerators[0] / denominators[0];
+
+    for (let i = 1; i < m; i++) {
+        if (numerators[i] / denominators[i] > max) {
+            max = numerators[i] / denominators[i];
+        }
+    }
+    document.write("MaxFraction is: " + max + "<br>");
+</script>
+</body>
+</html>

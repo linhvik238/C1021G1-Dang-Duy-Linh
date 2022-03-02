@@ -1,0 +1,9 @@
+Begin 
+  Nhập vào a, b, c
+  a = max
+  If a>b & a>c 
+     Display a là giá trị lớn nhất
+       Else If a<b, b>c 
+         Display b là giá trị lớn nhất
+           Else Display c là giá trị lớn nhất
+End

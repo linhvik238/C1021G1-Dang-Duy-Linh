@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 2 - If & switch case</title>
+</head>
+<body>
+<script>
+    // Bài 1: Chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng
+    // let salary = parseInt(prompt("Please enter your salary: "));
+    // let tax;
+    // let netSalary;
+    // if (salary > 15000000) {
+    //     tax = salary * 0.2;
+    //     netSalary = salary - tax;
+    // } else if (salary > 7000000) {
+    //     tax = salary * 0.1;
+    //     netSalary = salary - tax;
+    // } else {
+    //     tax = salary * 0.05;
+    //     netSalary = salary - tax;
+    // }
+    // document.write ("Your netSalary is: " + netSalary);
+
+    // Bài 2: Chương trình kiểm tra một ký tự trong bảng chữ cái là nguyên âm hay phụ âm.
+    let str = prompt("Please enter a character: ");
+    let strLowerCase = str.toLowerCase();
+    if (strLowerCase.length != 1) {
+        document.write("You did not enter any character or did enter more than 1 character, please try again");
+    } else {
+        switch (strLowerCase) {
+            case 'u':
+            case 'e':
+            case 'o':
+            case 'a':
+            case 'i':
+                document.write("It is a vowel");
+                break;
+            default:
+                document.write("It is a consonants");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển ký tự thường thành chữ hoa</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào 1 dòng chữ: ");
+    let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let LOWER = "abcdefghijklmnopqrstuvwxyz";
+    let result = [];
+
+    for (let i=0; i<a.length;i++){
+        if (UPPER.indexOf(a[i]) !== -1) {
+            result.push(a[i].toLowerCase());
+        } else if (LOWER.indexOf(a[i]) !== -1){
+            result.push(a[i].toUpperCase());
+        } else {
+            result.push(a[i]);
+        }
+    }
+    console.log(result.join(''));
+
+</script>
+</body>
+</html>

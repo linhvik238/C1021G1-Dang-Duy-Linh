@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật rỗng</title>
+</head>
+<body>
+<script>
+    let width = prompt("Nhập vào chiều dài hình chữ nhật:");
+    let height = prompt("Nhập vào chiều rộng hình chữ nhật");
+    for (let i = 1; i<=width; i++){
+        for (let j = 1; j<=height; j++){
+            if (i==1 || i == width || j==1 || j == height) {
+                document.write("*");
+            } else
+                document.write("&ensp;");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

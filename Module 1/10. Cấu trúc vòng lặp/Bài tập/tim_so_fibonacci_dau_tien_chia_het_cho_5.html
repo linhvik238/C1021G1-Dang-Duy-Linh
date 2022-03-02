@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên trong dãy fibonacci chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let s1=0;
+    let s2=1;
+    let sotieptheo = s1 + s2;
+    for (i=0;i<10;i++){
+        sotieptheo = s1 + s2;
+        s1 = s2;
+        s2 = sotieptheo;
+        if (sotieptheo%5==0){
+            console.log(sotieptheo);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

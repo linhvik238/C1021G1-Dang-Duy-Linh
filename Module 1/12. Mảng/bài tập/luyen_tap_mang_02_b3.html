@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ký tự trong mảng</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào độ dài của mảng"));
+    let a = new Array(n)
+    let count = 0;
+    for (let i = 0; i<a.length; i++){
+        a[i] = prompt("Nhập vào phần tử ở vị trí :" + i);
+        if (0 <=a[i] && a[i]<=9 ) {
+            count++;
+        }
+    }
+    document.write("Số ký tự số trong mảng là: " + count);
+</script>
+</body>
+</html>

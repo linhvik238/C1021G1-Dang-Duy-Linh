@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 5 bài 1</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào số hàng của mảng: "));
+    let m = parseInt(prompt("Nhập vào số cột của mảng: "));
+    let array = new Array(n, m);
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        array[i] = [];
+        for (let j = 0; j < m; j++) {
+            array[i][j] = parseInt(prompt("Nhập vào phần tử vị trí: " + [i, j]))
+            if (array[i][j] % 2 == 0) {
+                sum += array[i][j];
+            }
+        }
+    }
+    document.write("Tổng của các số chẵn trong ma trận được nhập vào với kích thước " + n + "x" + m + " là: " + sum)
+    console.log(array);
+</script>
+</body>
+</html>

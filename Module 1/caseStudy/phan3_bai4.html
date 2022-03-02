@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 3 bài 4</title>
+</head>
+<body>
+<script>
+    // let x = parseInt(prompt("Nhập số bạn muốn chuyển đổi: "));
+    // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // let string = ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín"];
+    // let array = [];
+    // let y = x.split ("");
+    // for (let i=0; i<number.length; i++) {
+    //     if (y[i] == number[i]) {
+    //         array.push(string[i]);
+    //     }
+    // }
+    // document.write(array.join(" "));
+
+    // let x = prompt("Nhập số bạn muốn chuyển đổi: ");
+    // let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // let string = ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín"];
+    // let array = [];
+    // let y = x.split("");
+    // for(let i = 0; i < number.length; i++) {
+    //     if (y[i] == number[i]) {
+    //         array.push(string[i]);
+    //     }
+    // }
+    // document.write(array.join(" "));
+
+    let chuSo = [1,2,3,4,5,6,7,8,9,10];
+    let kiTu = ["môt","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười"];
+    let a = prompt("nhập a: ");
+    let b = a.split("");
+    let c = []
+    for(let i = 0; i < b.length; i++){
+        for(let j = 0; j < chuSo.length; j++){
+            if(b[i] == chuSo[i]){
+                c.push(kiTu[i]);
+                break
+            }
+        }
+    }
+    console.log(c.join(" "))
+</script>
+</body>
+</html>

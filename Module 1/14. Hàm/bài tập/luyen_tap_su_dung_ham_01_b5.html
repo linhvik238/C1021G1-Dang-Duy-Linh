@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 01 - b5</title>
+</head>
+<body>
+    <input id="searchName" type="text">
+    <button type="button" onclick="findConstellationOfStars()">Search</button>
+<script>
+    function findConstellationOfStars() {
+        let inputWord = document.getElementById("searchName").value;
+        let nameOfStars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellationOfStars = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let check = true;
+        for (let i = 0; i < nameOfStars.length; i++) {
+            if (inputWord === nameOfStars[i]) {
+                result = constellationOfStars[i]
+                check = true;
+                break;
+            } check = false;
+        }
+        if (check) {
+            alert(result);
+        } else if (inputWord !== "") {
+            alert("không tìm thấy ngôi sao nào");
+        }
+    }
+    findConstellationOfStars();
+
+</script>
+</body>
+</html>

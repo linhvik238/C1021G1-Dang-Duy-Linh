@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+            color: blue;
+            font-weight: normal;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table border="0">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th style="float:right">To Currency</th>
+        <th></th>
+    </tr>
+        <td> <input id="amount" type="text" size="15"></td>
+        <td style="float:inherit"> <select name="dropdown" id="select1" style="width: 100px">
+            <option value="VND">Vietnam</option>
+            <option value="USD">USD</option>
+        </select>
+        <td> <select name="dropdown" id="select2" style="width: 80px">
+            <option value="USD">USD</option>
+            <option value="VND">Vietnam</option>
+        </select>
+    <td> <button style="background-color: blueviolet; color:white; font-weight: bold" onclick="quydoitiente()">Convert</button></td>
+</table>
+<div id="ketqua"></div>
+<script>
+    function quydoitiente() {
+        let sotiennhapvao = (document.getElementById('amount').value)
+        let luachon1 = (document.getElementById('select1').value)
+        let luachon2 = (document.getElementById('select2').value)
+        if (luachon1 == "VND" && luachon2 == "VND") {
+            document.getElementById('ketqua').innerHTML= 'Result: ' + sotiennhapvao + ('VND');
+        }
+        else if (luachon1 == "USD" && luachon2 == "USD") {
+            document.getElementById('ketqua').innerHTML= 'Result: ' + sotiennhapvao + ('USD');
+        }
+        else
+        if (luachon1 == "VND" && luachon2 == "USD") {
+            document.getElementById('ketqua').innerHTML= 'Result: ' + sotiennhapvao/24000 + ('USD');
+        }
+        else
+            document.getElementById('ketqua').innerHTML= 'Result: ' + sotiennhapvao*24000 + ('VND');
+    }
+</script>
+
+</body>
+</html>

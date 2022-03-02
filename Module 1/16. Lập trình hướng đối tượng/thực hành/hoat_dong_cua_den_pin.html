@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng sự hoạt động của đèn pin</title>
+</head>
+<body>
+<script>
+    class Battery {
+        constructor (energy) {
+            this.energy = energy;
+        }
+        setEnergy (value) {
+            this.energy = value;
+        }
+        getEnergy (){
+            return this.energy;
+        }
+        decreaseEnergy () {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+
+    class FlashLamp {
+        constructor(battery, status) {
+            this.battery = battery;
+            this.status = status;
+        }
+        getStatus() {
+            return this._status;
+        }
+        setStatus(value) {
+            this.status = value;
+        }
+        setBattery (battery) {
+            this.battery = battery;
+        }
+        getBattery () {
+            return this.battery;
+        }
+        light () {
+            if (this.status) {
+                alert ("Lighting");
+                this.battery.decreaseEnergy();
+            } else {
+                alert ("Not lighting");
+            }
+        }
+        turnOn () {
+            if (this.battery.getEnergy() > 0) {
+                this.status = true
+                this.battery.decreaseEnergy();
+            } else
+                alert("Out of battery");
+        }
+
+        turnOff() {
+            this.status = false
+        }
+    }
+    let battery = new Battery (20);
+    let flashLamp = new FlashLamp (battery, false);
+    document.write ("Năng lượng pin là: " + battery.getEnergy() + "<br>");
+    flashLamp.light();
+    flashLamp.turnOn();
+    flashLamp.light();
+    document.write("Battery infor after turn on: " + battery.getEnergy());
+</script>
+</body>
+</html>

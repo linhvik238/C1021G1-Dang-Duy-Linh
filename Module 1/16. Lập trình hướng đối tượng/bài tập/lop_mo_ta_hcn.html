@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body onload="createRectangle();">
+    <canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getArea() {
+            let area = this.width * this.height;
+            alert("Area of the Rectangle is: " + area);
+        }
+        getCircuit () {
+            let circuit = 2 * (this.width + this.height);
+            alert("Circuit of the Rectangle is: " + circuit);
+        }
+    }
+    function createRectangle (rectangleO){
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        ctx.fillRect(x,y, rectangleO.width, rectangleO.height);
+        // ctx.strokeRect(50,50, rectangleO.width, rectangleO.height);
+        // ctx.clearRect(45,45, rectangleO.width, rectangleO.height);
+    }
+    let rectangle0 = new Rectangle(100, 50);
+    createRectangle(rectangle0);
+    rectangle0.getArea();
+    rectangle0.getCircuit();
+
+</script>
+</body>
+</html>

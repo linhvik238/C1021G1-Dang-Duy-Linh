@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h1>Dictionary</h1>
+    <input id="searchWord" type="text">
+    <button onclick="dictionary()" id="search" type="button">Search</button>
+<script>
+    function dictionary() {
+        let word = document.getElementById("searchWord").value;
+        let tudien = [
+            ['cat', 'chicken', 'duck', 'dog'],
+            ['mèo', 'gà', 'vịt', 'chó']
+        ];
+        if (word == tudien[0][0]) {
+            document.write(tudien[1][0]);
+        } else if (word == tudien[0][1]){
+            document.write(tudien[1][1]);
+        } else if (word == tudien[0][2]){
+            document.write(tudien[1][2]);
+        } else if (word == tudien[0][3]) {
+            document.write(tudien[1][3]);
+        } else {
+            document.write("Không tìm thấy từ cần tìm");
+        }
+    }
+</script>
+</body>
+</html>

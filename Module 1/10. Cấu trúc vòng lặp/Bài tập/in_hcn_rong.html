@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật rỗng</title>
+</head>
+<body>
+<script>
+    let height = prompt("Nhập vào chiều cao HCN: ");
+    let width = prompt("Nhập vào chiều dài HCN: ");
+    for (let i=1;i<=height;i++) {
+        for (let j = 1; j <= width; j++) {
+            if (i == 1 || i == height || j == 1 || j == width) {
+                document.write("*");
+            } else {
+                document.write("&ensp;");
+            }
+        }document.write("<br>");
+    }
+</script>
+</body>
+</html>

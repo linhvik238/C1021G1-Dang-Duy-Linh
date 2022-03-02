@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let sotiengui = parseInt(prompt("Nhập vào số tiền gửi: "));
+    let sothang = parseInt(prompt("Nhập vào số tháng cho vay: "));
+    let laisuat = parseInt(prompt("Nhập vào lãi suất (%/năm) :"));
+    sotienlai = sotiengui * laisuat/100/12 * sothang;
+    alert(sotienlai);
+</script>
+</body>
+</html>

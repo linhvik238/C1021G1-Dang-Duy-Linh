@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let sum = 0;
+    let n = parseInt(prompt("Please input a number: "));
+    for (let i = 1; i < n; i++) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+    if (sum == n) {
+        alert (n + " là số hoàn hảo");
+    } else
+        alert (n + " không là số hoàn hảo");
+</script>
+</body>
+</html>

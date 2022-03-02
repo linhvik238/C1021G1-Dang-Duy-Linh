@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+    }
+
+    class Human {
+        constructor(name, sex, weight) {
+            this.name = name;
+            this.sex = sex;
+            this.weight = weight;
+        }
+
+        doTalking() {
+            console.log(prompt("Please input what you wanna say: "));
+        }
+
+        doEatApple(appleObj) {
+            for (let i = 0; i < 10; i++) {
+                if (appleObj.weight > 0) {
+                    alert(this.name + " is eating apple");
+                    this.weight += 1;
+                    appleObj.weight -= 1;
+                } else
+                    alert("This is empty apple");
+                    break;
+            }
+        }
+
+        doCheckAppleWeight(appleObj) {
+            alert("Apple weight is: " + appleObj.weight);
+        }
+    }
+
+    let humanO = new Human('Linh', 'Male', 70);
+    let appleO = new Apple (10);
+    console.log(humanO);
+    console.log(appleO);
+    humanO.doTalking();
+    humanO.doCheckAppleWeight(appleO);
+    humanO.doEatApple(appleO);
+    console.log(humanO);
+    console.log(appleO);
+    let appleO1 = new Apple (0);
+    let humanO1 = new Human ('Duyen', 'Female', 50);
+    console.log(humanO1);
+    console.log(appleO1);
+    humanO1.doTalking();
+    humanO1.doCheckAppleWeight(appleO1);
+    humanO1.doEatApple(appleO1);
+    console.log(humanO1);
+    console.log(appleO1);
+
+</script>
+</body>
+</html>

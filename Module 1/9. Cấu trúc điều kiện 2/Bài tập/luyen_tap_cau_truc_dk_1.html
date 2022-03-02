@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+<script>
+    /* let a = prompt("Nhập vào 1 số a: ");
+    let b = prompt("Nhập vào 1 số b: ");
+    if (a % b == 0) {
+        alert (a + " chia hết cho " + b);
+    }
+    bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không */
+
+    /* let a = parseInt(prompt("Nhập tuổi của bạn: "));
+    if (a < 16) {
+        alert ("Không đủ điều kiện vào học lớp 10");
+    }
+    Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10. */
+
+    /* let a = parseInt(prompt("Nhập vào 1 số nguyên: "));
+    if (a < 0) {
+        alert(a + ' là số bé hơn 0');
+    } else if (a>0) {
+        alert(a + ' là số lớn hơn 0');
+    } else {
+        alert (a + ' = 0')
+    }
+    Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0 */
+
+    /* Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+    let a = parseInt(prompt("Nhập 1 số a: "));
+    let b = parseInt(prompt("Nhập 1 số b: "));
+    let c = parseInt(prompt("Nhập 1 số c: "));
+    if (a>b && a>c) {
+        alert(a + " là số lớn nhất");
+        } else if (b>c) {
+        alert(b + " là số lớn nhất");
+    } else {
+        alert(c + " là số lớn nhất");
+    }
+    */
+
+    /* Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+    let a = parseInt(prompt("Nhập vào điểm bài kiểm tra"));
+    let b = parseInt(prompt("Nhập vào điểm thi giữa kỳ"));
+    let c = parseInt(prompt("Nhập vào điểm thi cuối kỳ"));
+    let dtb = (a + (b*2) + (c*3)) / 6;
+    if (dtb<=5) {
+        alert ("Học lực yếu");
+    } else if (dtb <= 6) {
+        alert ("Học lực trung bình")
+    } else if (dtb <= 7) {
+        alert("Học lực khá")
+    } else if (dtb <= 8) {
+        alert ("Học lực giỏi");
+    } else if (dtb <= 10) {
+        alert ("Học lực xuất sắc");
+    } else {
+        alert ("Bạn nhập sai rồi");
+    }
+    */
+
+    /* Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+    let giatrihoadon = parseInt(prompt("Nhập vào giá trị hóa đơn"));
+    let hoahong = null;
+    if (giatrihoadon <= 100000) {
+        hoahong = giatrihoadon * 0.02;
+    } else if (giatrihoadon <= 500000) {
+        hoahong = (2000 + ((giatrihoadon - 100000) * 0.05));
+        } else {
+        hoahong = (2000 + (giatrihoadon - 100000) * 0.05 + ((giatrihoadon - 500000) * 0.09));
+    } alert(hoahong + ' VND');
+    */
+
+
+
+    /* Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho:
+        Phí thuê bao bắt buộc là 25 nghìn.
+        600 đồng cho mỗi gọi của 50 phút đầu tiên.
+        400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+        200 đồng cho bất kỳ mỗi phút nào sau 200 phút tiếp theo.
+        let sophutgoi = parseInt(prompt("Nhập vào số phút gọi: "));
+        let phithuebaobatbuoc = 25000;
+        if (sophutgoi <= 50) {
+            tiencuoc = phithuebaobatbuoc + (sophutgoi * 600);
+        } else if (sophutgoi <= 200) {
+            tiencuoc = phithuebaobatbuoc + (50 * 600) + ((sophutgoi - 50) *400);
+        } else if (sophutgoi <= 350) {
+            tiencuoc = phithuebaobatbuoc + (50 * 600) + ((sophutgoi - 50) *400) + ((sophutgoi - 200) * 200);
+        }
+        alert(tiencuoc + " VND");
+</script>
+
+</body>
+</html>

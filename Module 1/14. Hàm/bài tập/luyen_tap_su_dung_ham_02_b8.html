@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng hàm 02 - b8</title>
+</head>
+<body>
+<script>
+    function Reverse(array) {
+        let reverse = array.reverse();
+        return reverse;
+    }
+    let n = parseInt(prompt("Nhập vào số phần tử trong mảng: "));
+    let arr = [];
+        for (let i=0; i < n; i++){
+            arr[i] = parseInt(prompt("Nhập vào phần tử vị trí: " + i));
+        }
+        alert("mảng nhập vào là: " + arr);
+        let result = Reverse(arr);
+        alert("mảng sau khi đổi chỗ là: " + result);
+</script>
+</body>
+</html>

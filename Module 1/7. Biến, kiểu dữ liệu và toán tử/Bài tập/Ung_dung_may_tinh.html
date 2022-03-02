@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1 style="font-weight: bold">Calculator</h1>
+<input id="so1" type="text" size ="25"> <input id="so2" type="text" size="25"><br><br>
+<button onclick="tinhtoan('+')">Addition(+)</button>
+<span><button onclick="tinhtoan('-')">Subtraction(-)</button></span>
+<span><button onclick="tinhtoan('*')">Multiplication(X)</button></span>
+<span><button onclick="tinhtoan('/')">Division(/)</button></span>
+<div id="ketqua"></div>
+<script>
+    function tinhtoan(phepTinh) {
+        let a = (document.getElementById('so1').value);
+        let b = (document.getElementById('so2').value);
+        if (phepTinh == '+') {
+            let tong = parseInt(a) + parseInt(b);
+            document.getElementById('ketqua').innerHTML = 'Result: ' + tong;
+        }
+        else
+            if (phepTinh == '-') {
+                let hieu = parseFloat(a) - parseFloat(b);
+                document.getElementById('ketqua').innerHTML = 'Result: ' + hieu;
+        } else if (phepTinh == '*') {
+            let tich = parseFloat(a) * parseFloat(b);
+            document.getElementById('ketqua').innerHTML = 'Result: ' + tich;
+        } else if (phepTinh == '/') {
+            let thuong = parseFloat(a) / parseFloat(b);
+            document.getElementById('ketqua').innerHTML = 'Result: ' + thuong;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+
+    let month = parseInt(prompt("Please input the month you wanna check: "));
+    let year = parseInt(prompt("Please input the year you wanna check"));
+    let arr = [];
+    arr.push(month);
+    arr.push(year);
+    let check = arr.toString('/');
+
+    function checkLeapYear(year) {
+        if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0) {
+            return true;
+        } else
+            return false;
+    }
+
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert("This month has 31 days");
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert("This month has 30 days");
+            break;
+        case 2:
+            if (checkLeapYear(year)) {
+                alert("This is a leap year, February has 29 days");
+            } else
+                alert("This is not a leap year, February has 28 days");
+    }
+</script>
+</body>
+</html>

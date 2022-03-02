@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 02 - b9</title>
+</head>
+<body>
+<script>
+    function checkWord(word, array){
+        let count = 0;
+        for ( let i = 0; i < array.length; i++){
+            for (let j = 0; j < array[i].length; j++){
+                if (word === array[i][j]){
+                    count++;
+                }
+            }
+        }
+        if (count !== 0){
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let num = prompt("Nhập vào số lượng ký tự của mảng:")
+    let arr = [];
+    for ( let i = 0; i < num; i++){
+        arr[i] = prompt("Nhập vào phần tử thứ: " + i);
+    }
+    let word = prompt("Nhập vào 1 ký tự: ");
+    let check = checkWord(word, arr);
+    document.write ("Số lần xuất hiện của " + word + " là: " + check);
+</script>
+</body>
+</html>

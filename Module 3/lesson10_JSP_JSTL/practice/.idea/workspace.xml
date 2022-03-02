@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f751e90c-882e-422d-a319-59f29685b3db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../demo/.idea/demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/demo_bootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson8_Bootstrap co ban/exercise/.idea/exercise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson8_Bootstrap co ban/exercise/exercise_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson8_Bootstrap co ban/practice/.idea/practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson8_Bootstrap co ban/practice/practice_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson8_Bootstrap co ban/practice/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson9_Tong quan ung dung web/thuc_hanh/thuc_hanh2/src/main/java/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson9_Tong quan ung dung web/thuc_hanh/thuc_hanh3/src/main/java/ConverterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../demo-tomcat/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson7_Thiet ke bo cuc trang web/exercise/e2_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson7_Thiet ke bo cuc trang web/exercise/e2_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson7_Thiet ke bo cuc trang web/exercise/exercise_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson7_Thiet ke bo cuc trang web/exercise/exercise_2.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="24ltnM9lbasj6lQKS4oS5k5iaLN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="practice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="practice" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f751e90c-882e-422d-a319-59f29685b3db" name="Changes" comment="" />
+      <created>1644217173170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644217173170</updated>
+      <workItem from="1644217176930" duration="451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

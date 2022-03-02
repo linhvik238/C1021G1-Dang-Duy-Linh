@@ -1,0 +1,254 @@
+html {
+    background-color: darkred;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+.btn {
+    background-color: darkred;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size: 1em;
+    font-size: 22px;
+    line-height: 1em;
+    margin: 15px 40px;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: "";
+    height: 24px;
+    position: absolute;
+    width: 24px;
+}
+
+.btn:before {
+    border-color: #c47135;
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+}
+
+.btn:after {
+    border-bottom-width: 2px;
+    border-color: #c47135;
+    bottom: -5px;
+    right: 0px;
+}
+
+.btn:hover,
+.btn.hover {
+    background-color: #c47135;
+}
+
+.btn:hover:before,
+.btn.hover:before,
+.btn:hover:after,
+.btn.hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+#top {
+    border: 10px ridge whitesmoke;
+    border-radius: 30px;
+    font-family: Tahoma;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: darkred;
+    opacity: 0.7;
+    width: auto;
+    margin: 0px;
+}
+h3 {
+    text-align: center;
+}
+.position-left {
+    position: relative;
+}
+
+.CristianoRonaldo {
+    background: url("hình/Cr7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    text-align: justify;
+    text-indent: 40px;
+    color: khaki;
+    font-size: 20px;
+    border-radius: 100px;
+    border: 10px ridge whitesmoke;
+    width: 600px;
+    padding: 50px 10px;
+    position: absolute;
+}
+
+.VictorLindelof {
+    background: url("hình/Lindelof.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    text-align: justify;
+    text-indent: 40px;
+    color: khaki;
+    font-size: 20px;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    padding: 83px 10px;
+    position: absolute;
+}
+
+.MasonGreenWood {
+    background: url("hình/MasonGW.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    text-align: justify;
+    text-indent: 40px;
+    color: khaki;
+    font-size: 20px;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    padding: 110px 10px;
+    position: absolute;
+}
+
+.HarryMaguire {
+    background: url("hình/HarryMG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    text-align: justify;
+    text-indent: 40px;
+    color: khaki;
+    font-size: 20px;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    padding: 53px 10px;
+    position: absolute;
+}
+
+.BrunoFernandes {
+    background: url("hình/BrunoFD.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    text-align: justify;
+    text-indent: 40px;
+    color: khaki;
+    font-size: 20px;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    padding: 30px 10px;
+    position: absolute;
+}
+
+.position-right {
+    position: relative;
+    left: 650px;
+}
+
+.DaviddeGea {
+    color: khaki;
+    background: url("hình/David Degea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 20px;
+    padding: 73px 10px;
+    position: absolute;
+}
+
+.MarcusRashford {
+    color: khaki;
+    background: url("hình/Marcus Rashford.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    position: absolute;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 20px;
+    padding: 76px 10px;
+}
+
+.PaulPogba {
+    color: khaki;
+    background: url("hình/Pogba.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    position: absolute;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 20px;
+    padding: 87px 10px;
+}
+
+.Fred {
+    color: khaki;
+    background: url("hình/Fred.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    position: absolute;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 20px;
+    padding: 53px 10px;
+}
+
+.RaphaelVarane {
+    color: khaki;
+    background: url("hình/Varane.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px ridge whitesmoke;
+    border-radius: 100px;
+    width: 600px;
+    position: absolute;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 20px;
+    padding: 18px 10px;
+}
+
+.hidden {
+    transition: 2s;
+}

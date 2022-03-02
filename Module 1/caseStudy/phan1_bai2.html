@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác cân rỗng</title>
+</head>
+<body>
+<script>
+    let h = prompt("Nhập vào chiều cao của tam giác: ");
+    for (let i = 0; i <= h; i++) {
+        for (let j = 0; j <= h; j++) {
+            if (j==0 || j==i || i==h) {
+                document.write(" * ");
+            } else {
+                document.write('&ensp;');
+            }
+        }
+        document.write("</br>");
+    }
+</script>
+</body>
+</html>

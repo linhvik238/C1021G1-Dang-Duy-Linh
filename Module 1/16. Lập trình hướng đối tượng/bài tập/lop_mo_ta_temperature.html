@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        convertCelsiusToFahrenheit() {
+            if (-273 < this.celsius) {
+                let fahrenheit = this.celsius * 9/5 + 32;
+                document.write ("The Fahrenheit temperature after converted is : " + fahrenheit + "</br>");
+            }
+        }
+        convertCelsiusToKelvin() {
+            if (-273 < this.celsius) {
+                let kelvin = this.celsius + 273.15;
+                document.write ("The Kelvin temperature after converted is : " + kelvin);
+            }
+        }
+    }
+    let temperatureO = new Temperature(25);
+    temperatureO.convertCelsiusToFahrenheit();
+    temperatureO.convertCelsiusToKelvin();
+
+</script>
+
+</body>
+</html>

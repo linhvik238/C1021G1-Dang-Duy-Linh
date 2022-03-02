@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 02 - b3</title>
+</head>
+<body>
+<script>
+    function calFactorial(Number){
+        let result = 1;
+        for (let i = 1; i <= Number; i++){
+            result = result * i;
+        }
+        return result;
+    }
+    let a = parseInt(prompt("Nhập vào 1 số: "));
+    let giaithua = calFactorial(a);
+    document.write("Giai thừa của số " + a + " là: " + giaithua);
+</script>
+</body>
+</html>

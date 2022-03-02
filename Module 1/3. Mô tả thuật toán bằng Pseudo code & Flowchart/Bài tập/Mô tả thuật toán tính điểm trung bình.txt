@@ -1,0 +1,7 @@
+Begin
+  Input điểm Toán, Lý, Hóa
+  Điểm trung bình = (Toán + Lý + Hóa) / 3
+  Display điểm trung bình
+End
+
+	

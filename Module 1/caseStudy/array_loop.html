@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng và Loop></title>
+</head>
+<body>
+<script>
+    // Bài 1: Xây dựng mảng B là PrefixSum của mảng A
+    // let quantity = parseInt(prompt("Please input quantity elements of the Array: "));
+    // let arrA = new Array (quantity);
+    // let prefixArr = [];
+    // let sum = 0;
+    // for (let i = 0; i < arrA.length; i++) {
+    //     arrA[i] = parseInt(prompt("Please input the element at: " + i));
+    //         sum += arrA[i];
+    //         prefixArr.push(sum);
+    //     }
+    // document.write("The PrefixSums of arrA" + " [" + arrA + "]" + " is: " + "[" + prefixArr.join(",") + "]");
+
+    let arrA = [];
+    let arrB = [];
+    let result = [];
+
+    let sizeA = parseInt(prompt("Please input the length of Array A: "));
+
+    for (let i = 0; i < sizeA; i++) {
+        sizeA.push(parseInt(prompt("Please input the element of " + i + " position")));
+    }
+
+    let sizeB = parseInt(prompt("Please input the length of Array A: "));
+
+    for (let i = 0; i < sizeA; i++) {
+        sizeB.push(parseInt(prompt("Please input the element of " + i + " position")));
+    }
+
+    for (let i = 0; i < sizeB; i++) {
+        if (arrA.indexOf(arrB[i]) === -1 && result.indexOf(arrB[i])) {
+            result.push(arrB[i]);
+        }
+    }
+
+    result.sort();
+    document.write( ")
+
+
+</script>
+</body>
+</html>

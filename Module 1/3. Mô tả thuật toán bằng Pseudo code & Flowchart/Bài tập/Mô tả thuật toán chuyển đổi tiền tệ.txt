@@ -1,0 +1,5 @@
+Begin
+  Input số tiền $
+  VND = Số tiền $ * 23000
+  Display VND
+End

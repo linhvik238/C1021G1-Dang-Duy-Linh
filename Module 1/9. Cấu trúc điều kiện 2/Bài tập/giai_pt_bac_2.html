@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập vào số a: "));
+    let b = parseInt(prompt("Nhập vào số b"));
+    let c = parseInt(prompt("Nhập vào số c"));
+    delta = b * b - (4*a*c);
+    if (delta<0) {
+        alert("Phương trình vô nghiệm");
+    } else if (delta==0) {
+        alert("Phương trình có nghiệm kép: x1= x2= " + -b / (2*a));
+    } else {
+        alert("Phương trình có nghiệm là: x1= " + (-b + Math.sqrt(delta))/(2*a));
+        alert("và x2 = " + (-b - Math.sqrt(delta))/(2*a));
+    }
+</script>
+</body>
+</html>

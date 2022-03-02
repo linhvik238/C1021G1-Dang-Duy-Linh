@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:text-indent="http://www.w3.org/1999/xhtml">
+<head>
+    <style>p.indent{padding-left: 0.5em}
+    p {
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+    td {
+        width: 150px;
+        height: 50px;
+        text-align: center;
+    }
+    input [type="submit"] {
+        width: 150px;
+        height: 50px;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Form Lấy Survey Khách Hàng</title>
+</head>
+<body>
+<h1>Market Research Survey</h1>
+<p>Please take a few moments to complete this satisfaction survey</p>
+<p><b>What is your age range?</b> <br>
+    <select name="dropdown">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+</p>
+<p><b>What is your yearly income range?</b><br>
+    <select name="dropdown">
+        <option value="$0-$25,000">$0-$25,000</option>
+        <option value="$25,000-$50,000">$25,000-$50,000</option>
+        <option value="$50,001-$100,000">$50,001-$100,000</option>
+        <option value="$100,000+">$100,000+</option>
+    </select>
+</p>
+<p><b>Gender Identity</b> <br>
+    <input type="radio" name="gender" value="Male">Male <br>
+    <input type="radio" name="gender" value="Female">Female <br>
+    <input type="radio" name="gender" value="Nonbinary">Nonbinary <br>
+    <input type="radio" name="gender" value="Other">Other <br>
+    <input class="indent" type="text" size="15">
+</p>
+<p> <b>Which of the following products have you purchased in the last 2 months. Please check all that apply.</b><br>
+    <input type="checkbox" name="Product" value="Product 1">Product 1 <br>
+    <input type="checkbox" name="Product" value="Product 2">Product 2 <br>
+    <input type="checkbox" name="Product" value="Product 3">Product 3 <br>
+</p>
+<p> <b>How often would you use our new product?</b> <br>
+    <input type="radio" name="product" value="Daily">Daily <br>
+    <input type="radio" name="product" value="Weekly">Weekly <br>
+    <input type="radio" name="product" value="Monthly">Monthly <br>
+</p>
+<p><b>What would you pay for the new product?</b></p>
+    $<input type="text" size="10"> .<input type="text" size="2">
+<p class="indent">Dollars &emsp; &emsp; &emsp; Cents</p>
+<p><b>What features would you like to see in the new product.</b></p>
+    <textarea name="features" cols="60" rows="6"></textarea>
+<p>Please rate your level of agreement with the following statements.</p>
+<table border="2" style="background-color:white">
+<tr style="background-color: #BBBBBB">
+        <td></td>
+        <td><b>Strongly Disagree</b></td>
+        <td><b>Disagree</b></td>
+        <td><b>Agree</b></td>
+        <td><b>Strongly Agree</b></td>
+</tr>
+<tr style="background-color: white"></tr>
+        <td><b>Our products are priced fairly</b></td>
+        <td>
+            <input type="radio" value="1"><br>1
+        </td>
+        <td>
+            <input type="radio" value="2"><br>2
+        </td>
+        <td>
+            <input type="radio" value="3"><br>3
+        </td>
+        <td>
+            <input type="radio" value="4"><br>4
+        </td>
+    </tr>
+    <tr style="background-color:#DDDDDD">
+        <td><b>Our products are high quality</b></td>
+        <td>
+            <input type="radio" value="1"><br>1
+        </td>
+        <td>
+            <input type="radio" value="2"><br>2
+        </td>
+        <td>
+            <input type="radio" value="3"><br>3
+        </td>
+        <td>
+            <input type="radio" value="4"><br>4
+        </td>
+    </tr>
+    <tr>
+        <td><b>You would recommend our product to a friend or coworker</b></td>
+        <td>
+            <input type="radio" value="1"><br>1
+        </td>
+        <td>
+            <input type="radio" value="2"><br>2
+        </td>
+        <td>
+            <input type="radio" value="3"><br>3
+        </td>
+        <td>
+            <input type="radio" value="4"><br>4
+        </td>
+    </tr>
+</table>
+<input type="submit" name="submit" value="submit">
+</body>
+</html>

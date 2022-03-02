@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Study - Vẽ Hình</title>
+</head>
+<body>
+<script>
+    // Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m
+    // let width = parseInt(prompt("Please enter the width of the Rectangular: "));
+    // let height = parseInt(prompt("Please enter the height of the Rectangular: "));
+    // let shape = "";
+    // for (let i = 1; i <= height; i++) {
+    //     for (let j = 1; j <= width; j++)
+    //         if (i === 1 || i === height) {
+    //             shape += "*";
+    //         } else if (j === 1 || j === width) {
+    //             shape += "*";
+    //         } else
+    //             shape += "&ensp;"
+    //     shape += "<br>";
+    // }
+    // document.write(shape);
+
+    // Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h
+    // let height = parseInt(prompt("Please enter the height of the Triangle: "));
+    // let shape = "";
+    // for (let i = 1; i<=height; i++) {
+    //     for (let j = 1; j<=height; j++) {
+    //         if (j === 1 || j === i || i === height) {
+    //             shape += "*";
+    //         } else
+    //             shape += "&ensp;";
+    //     }
+    //     shape += "<br>"
+    // }
+    // document.write(shape);
+
+    // Bài 3: Vẽ tam giác cân đặc có chiều cao h
+    // let height = parseInt(prompt("Please enter the height of the Triangle: "));
+    // let width = height*2 - 1;
+    // let shape = "";
+    // for (let i = 1; i<=height; i++) {
+    //     for (let j = 1; j<=width; j++) {
+    //         if ((j>= height-i+1 && j<=height+i-1) || i === height) {
+    //             shape += "*";
+    //         } else
+    //             shape += "&ensp;";
+    //     }
+    //     shape += "<br>";
+    // }
+    // document.write(shape);
+
+    // Bài 4: Vẽ tam giác cân rỗng có chiều cao h
+    let height = parseInt(prompt("Please enter the height of the Triangle: "));
+    let width = height*2 - 1;
+    let shape = "";
+    for (let i = 1; i<=height; i++) {
+        for (let j = 1; j<=width; j++) {
+            if (j === height-i+1 || j === height+i-1 || i === height) {
+                shape += "*";
+            } else
+                shape += "&ensp;";
+        }
+        shape += "<br>";
+    }
+    document.write(shape);
+</script>
+</body>
+</html>

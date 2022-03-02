@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th {
+            color: white;
+            background-color: #ff6600;
+            text-align: center;
+        }
+        td  {
+            color: #0066FF;
+            text-align: left;
+        }
+        span {
+            color: #FF9900;
+        }
+        table {
+        background-color: white;
+        }
+    </style>
+</head>
+<body>
+<table border ="0">
+<form method="get" action="Tao_form_don_gian.html"></form>
+<th colspan="5">Sở thích của bạn</th>
+<tr>
+    <td style="text-align:right">Your name</td>
+    <td><input type="text" size="20"/></td></tr>
+<tr>
+    <td style="text-align:right">Email</td>
+    <td> <input type="text" size="12"/></td>
+</tr>
+    <tr>
+        <td rowspan="3" style="vertical-align:top"/>Hobby</td>
+        <td><input type="checkbox" name="Sport" value="on"/><span>Sport</span></td>
+        <td><input type="checkbox" name="Music" value="on"/><span>Music</span></td>
+        <td><input type="checkbox" name="Read Book" value="on"/><span>Read Book</span></td></tr>
+    <tr>
+        <td><input type="checkbox" name="Web Browsing" value="on"/><span>Web Browsing</span></td>
+        <td><input type="checkbox" name="Play game" value="on"/><span>Play game</span></td>
+        <td><input type="checkbox" name="Movie" value="on"/><span>Movie</span></td></tr>
+    <tr>
+        <td><input type="checkbox" name="Travel" value="on"/><span>Travel</span></td></tr>
+</table>
+    <input style="text-align:center" type="Submit" name="Submit" value="Submit"/>
+    <input style="text-align:center" type="Reset" name="Reset" value="Reset"/>
+</body>
+</html>

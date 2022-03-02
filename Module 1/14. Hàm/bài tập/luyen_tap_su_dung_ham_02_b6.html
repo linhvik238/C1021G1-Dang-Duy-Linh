@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 02 - b6</title>
+</head>
+<body>
+<script>
+    function checkPositiveNumber(Number) {
+        let check = true;
+        if (Number < 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    let a = parseInt(prompt("Nhập vào 1 số nguyên: "));
+    let result = checkPositiveNumber(a);
+    document.write(result);
+</script>
+</body>
+</html>
