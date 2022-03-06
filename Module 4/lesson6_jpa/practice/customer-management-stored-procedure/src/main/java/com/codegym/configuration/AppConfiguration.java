@@ -1,4 +1,4 @@
-package com.codegym.config;
+package com.codegym.configuration;
 
 import com.codegym.repository.ICustomerRepository;
 import com.codegym.repository.impl.CustomerRepositoryImpl;
@@ -23,9 +23,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.spring4.SpringTemplateEngine;
-import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
-import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.spring5.ISpringTemplateEngine;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
 import javax.persistence.EntityManager;
@@ -70,7 +71,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     @Bean
     public ThymeleafViewResolver viewResolver() {
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
-        viewResolver.setTemplateEngine(templateEngine());
+        viewResolver.setTemplateEngine((ISpringTemplateEngine) templateEngine());
         viewResolver.setCharacterEncoding("UTF-8");
         return viewResolver;
     }
@@ -98,7 +99,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/thuc_hanh_b6?createDatabaseIfNotExist=true&useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/thuc_hanh_b6_2?createDatabaseIfNotExist=true&useSSL=false");
         dataSource.setUsername("root");
         dataSource.setPassword("LinhVik230893");
         return dataSource;
@@ -136,6 +137,4 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public ICustomerService customerService() {
         return new CustomerServiceImpl();
     }
-
-
 }

@@ -1,9 +1,9 @@
 package com.codegym.config;
 
-import com.codegym.repository.IBlogRepository;
-import com.codegym.repository.impl.BlogRepositoryImpl;
-import com.codegym.service.IBlogService;
-import com.codegym.service.impl.BlogServiceImpl;
+//import com.codegym.repository.IBlogRepository;
+//import com.codegym.repository.impl.BlogRepositoryImpl;
+//import com.codegym.service.IBlogService;
+//import com.codegym.service.impl.BlogServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -127,13 +127,13 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         registry.addResourceHandler("/img/**").addResourceLocations("WEB-INF/img/");
     }
 
-    @Bean
-    public IBlogRepository iBlogRepository () {
-        return new BlogRepositoryImpl();
-    }
-
-    @Bean
-    public IBlogService iBlogService () {
-        return new BlogServiceImpl();
-    }
+//    @Bean
+//    public IBlogRepository iBlogRepository () {
+//        return new BlogRepositoryImpl();
+//    }
+//
+//    @Bean
+//    public IBlogService iBlogService () {
+//        return new BlogServiceImpl();
+//    }
 }

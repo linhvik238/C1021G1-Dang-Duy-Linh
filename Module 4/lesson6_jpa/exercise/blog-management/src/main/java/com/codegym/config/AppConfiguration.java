@@ -1,9 +1,9 @@
 package com.codegym.config;
 
-import com.codegym.repository.ICustomerRepository;
-import com.codegym.repository.impl.CustomerRepositoryImpl;
-import com.codegym.service.ICustomerService;
-import com.codegym.service.impl.CustomerServiceImpl;
+import com.codegym.repository.IBlogRepository;
+import com.codegym.repository.impl.BlogRepositoryImpl;
+import com.codegym.service.IBlogService;
+import com.codegym.service.impl.BlogServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -98,7 +98,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/thuc_hanh_b6?createDatabaseIfNotExist=true&useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&useSSL=false");
         dataSource.setUsername("root");
         dataSource.setPassword("LinhVik230893");
         return dataSource;
@@ -126,16 +126,5 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         registry.addResourceHandler("/js/**").addResourceLocations("WEB-INF/js/");
         registry.addResourceHandler("/img/**").addResourceLocations("WEB-INF/img/");
     }
-
-    @Bean
-    public ICustomerRepository customerRepository() {
-        return new CustomerRepositoryImpl();
-    }
-
-    @Bean
-    public ICustomerService customerService() {
-        return new CustomerServiceImpl();
-    }
-
 
 }

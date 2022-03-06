@@ -1,4 +1,4 @@
-package config;
+package com.codegym.config;
 
 import javax.servlet.*;
 import java.io.IOException;

@@ -1,5 +1,9 @@
 package com.codegym.config;
 
+import com.codegym.repository.ICustomerRepository;
+import com.codegym.repository.impl.CustomerRepositoryImpl;
+import com.codegym.service.ICustomerService;
+import com.codegym.service.impl.CustomerServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -49,7 +53,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setPrefix("/WEB-INF/templates/");
+        templateResolver.setPrefix("/WEB-INF/views/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
@@ -122,4 +126,16 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         registry.addResourceHandler("/js/**").addResourceLocations("WEB-INF/js/");
         registry.addResourceHandler("/img/**").addResourceLocations("WEB-INF/img/");
     }
+
+    @Bean
+    public ICustomerRepository customerRepository() {
+        return new CustomerRepositoryImpl();
+    }
+
+    @Bean
+    public ICustomerService customerService() {
+        return new CustomerServiceImpl();
+    }
+
+
 }

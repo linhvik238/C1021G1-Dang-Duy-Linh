@@ -2,7 +2,7 @@ package com.codegym.service;
 
 import java.util.List;
 
-public interface IGenaralService<T>{
+public interface IGeneralService<T>{
     List<T> findAll();
 
     T findById(Long id);
