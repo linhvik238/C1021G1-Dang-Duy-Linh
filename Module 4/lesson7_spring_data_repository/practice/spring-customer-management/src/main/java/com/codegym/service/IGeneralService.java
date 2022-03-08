@@ -5,12 +5,12 @@ import com.codegym.model.Customer;
 import java.util.List;
 import java.util.Optional;
 
-public interface IGeneralService<Customer> {
-    Iterable<Customer> findAll();
+public interface IGeneralService<T> {
+    Iterable<T> findAll();
 
-    Optional<Customer> findById(Long id);
+    Optional<T> findById(Long id);
 
-    void save(Customer customer);
+    void save(T t);
 
     void remove(Long id);
 }
