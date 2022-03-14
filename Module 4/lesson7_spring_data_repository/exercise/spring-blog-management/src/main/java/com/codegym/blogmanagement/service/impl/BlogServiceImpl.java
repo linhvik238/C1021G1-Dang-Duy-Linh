@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BlogServiceImpl implements IBlogService {
     @Autowired
@@ -19,12 +21,17 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     @Override
-    public Blog createBLog(Blog blog) {
-        return repository.save(blog);
+    public void createBLog(Blog blog) {
+        repository.save(blog);
     }
 
     @Override
-    public Blog viewByName(String name) {
-        return repository.viewByName(name);
+    public List<Blog> findAllByTitleContaining(String title) {
+        return repository.findAllByTitleContaining(title);
+    }
+
+    @Override
+    public void deleteBlog(Long id) {
+        repository.deleteById(id);
     }
 }

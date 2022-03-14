@@ -1,6 +1,6 @@
-package com.codegym.repository;
+package com.codegym.springusermanagement.repository;
 
-import com.codegym.model.User;
+import com.codegym.springusermanagement.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -7,12 +7,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.List;
 
 @Controller
 @RequestMapping({"/blog", "/home", ""})
@@ -40,10 +40,10 @@ public class BlogController {
         return "redirect:/list";
     }
 
-    @GetMapping ("/view/{name}")
-    public String viewBlog () {
-
+    @GetMapping ("/view-blog/{title}")
+    public String listBlogByTitle(@PathVariable String title, Model model) {
+        List<Blog> blog = blogService.findAllByTitleContaining(title);
+        model.addAttribute("blog", blog);
+        return "view";
     }
-
-
 }

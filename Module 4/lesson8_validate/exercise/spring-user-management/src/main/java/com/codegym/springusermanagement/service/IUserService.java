@@ -1,5 +1,7 @@
-package com.codegym.service;
+package com.codegym.springusermanagement.service;
+
+import com.codegym.springusermanagement.model.User;
 
 public interface IUserService {
-    public
+    public void create (User user);
 }
