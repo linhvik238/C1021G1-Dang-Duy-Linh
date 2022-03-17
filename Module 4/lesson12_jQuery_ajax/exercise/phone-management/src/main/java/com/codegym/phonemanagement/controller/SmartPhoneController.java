@@ -42,4 +42,17 @@ public class SmartPhoneController {
         smartPhoneService.remove(id);
         return new ResponseEntity<>(smartPhoneOptional.get(), HttpStatus.OK);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<SmartPhone> editSmartphone(@PathVariable Long id,@RequestBody SmartPhone smartphone){
+        Optional<SmartPhone> smartphoneOptional = smartPhoneService.findById(id);
+        if (!smartphoneOptional.isPresent()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        smartphoneOptional.get().setProducer(smartphone.getProducer());
+        smartphoneOptional.get().setModel(smartphone.getModel());
+        smartphoneOptional.get().setPrice(smartphone.getPrice());
+        smartPhoneService.save(smartphoneOptional.get());
+        return new ResponseEntity<>(smartphoneOptional.get(),HttpStatus.OK);
+    }
 }

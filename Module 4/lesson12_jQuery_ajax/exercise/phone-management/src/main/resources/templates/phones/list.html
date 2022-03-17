@@ -34,6 +34,59 @@
             event.preventDefault();
         }
 
+        $(document).ready(function () {
+            $('.editSmartphone').click(function (event) {
+                let a = $(this);
+                let smartphoneId = a.attr("href");
+                $('#id-input').val(smartphoneId);
+                let producer = $('#producer-input');
+                producer.val(a.parent().parent().children()[0].innerText);
+                let model = $('#model-input');
+                model.val(a.parent().parent().children()[1].innerText);
+                let price = $('#price-input');
+                price.val(a.parent().parent().children()[2].innerText);
+                let inputForm = $('#input-form');
+                inputForm.attr("display","block");
+                $.ajax({
+                    type: "PUT",
+                    url: `/smartphones/${smartphoneId}`,
+                    success: successHandler
+                });
+                event.preventDefault();
+            });
+        })
+
+        function updateSmartphone() {
+
+            let id = $('#id-input').val();
+            let producer = $('#producer-input').val();
+            let model = $('#model-input').val();
+            let price = $('#price-input').val();
+            let newSmartphone = {
+                id:id,
+                producer: producer,
+                model: model,
+                price: price
+            };
+            console.log(newSmartphone);
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                contentType:'application/json;charset=utf-8',
+                type: "PUT",
+                data: JSON.stringify(newSmartphone),
+                url: `/smartphones/`+id,
+                success: function () {
+                    location.reload();
+                }
+
+            });
+
+            event.preventDefault();
+        }
+
         function successHandler() {
             $.ajax({
                 type: "GET",
@@ -49,7 +102,9 @@
                         '        <td>Delete</td>\n' +
                         '    </tr>';
                     for (let i = 0; i < data.length; i++) {
-                        content += getSmartphone(data[i]);
+                        content += '<tr>' + getSmartphone(data[i]) +
+
+                            '</tr>';
                     }
                     document.getElementById('smartphoneList').innerHTML = content;
                 }
@@ -58,7 +113,17 @@
 
         function getSmartphone(smartphone) {
             return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
-                `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td></tr>`;
+                `<td> <input type="hidden" id="${smartphone.id}">
+                       <button class="deleteSmartphone">Delete</button></td></tr>`;
+        }
+
+        function deleteSmartphone(id) {
+            $.ajax ({
+                url: "smartphones/" + id,
+                    type: "DELETE",
+                    dataType: "json",
+                    success: successHandler()
+            })
         }
 
         $(document).ready(function () {
@@ -83,7 +148,7 @@
             });
         })
     </script>
-    <script src="../static/jquery-3.5.1.min.js"></script>
+
 </head>
 <body>
 <form id="add-smartphone">
@@ -113,6 +178,7 @@
         <td>Model</td>
         <td>Price</td>
         <td>Delete</td>
+        <td>Edit</td>
     </tr>
     <th:block th:each="smartphone: ${smartphones}">
         <tr>
@@ -120,8 +186,17 @@
             <td th:text="${smartphone.model}"></td>
             <td th:text="${smartphone.price}"></td>
             <td><a class="deleteSmartphone" th:href="${smartphone.getId()}">Delete</a></td>
+            <td><input type="button" class="editSmartphone" th:href="${smartphone.getId()}" value="Edit"></td>
         </tr>
     </th:block>
+
+    <form id="input-form">
+        <input type="hidden" id="id-input" value="">
+        <input type="text" id="producer-input" value="">
+        <input type="text" id="model-input" value="">
+        <input type="text" id="price-input" value="">
+        <input type="button" value="Save" onclick="updateSmartphone()">
+    </form>
 </table>
 </body>
 </html>
