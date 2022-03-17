@@ -1,0 +1,11 @@
+login.title=
+login.heading=??ng nh?p
+login.username_label=Tên ??ng nh?p:
+login.password_label=M?t Kh?u:
+login.submit_label=??ng Nh?p
+
+dashboard.title=Xin Chào
+dashboard.heading=Giao Di?n Chính
+dashboard.greeting=Xin Chào
+error.title=L?i
+error.heading=Không Tìm Th?y
