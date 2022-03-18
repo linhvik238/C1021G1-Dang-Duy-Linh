@@ -9,6 +9,8 @@ import java.util.List;
 public interface IBlogService {
     Page<Blog> findAll(Pageable pageable);
     void createBLog (Blog blog);
-    List<Blog> findAllByTitleContaining(String title);
+    Page<Blog> findAllByTitleContaining(String title, Pageable pageable);
     void deleteBlog(Long id);
+    void edit(Blog blog);
+    Blog findById(Long id);
 }

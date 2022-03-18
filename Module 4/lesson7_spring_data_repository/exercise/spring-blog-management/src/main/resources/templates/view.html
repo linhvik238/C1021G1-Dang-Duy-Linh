@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Blog Detail</title>
+    <title style="text-align: center">Blog Detail</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -11,21 +11,19 @@
     Blog Detail
 </div>
 
-    <div class="col-sm-4 p-2" th:each="blog :${blog}">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 th:text="${blog.title}" class="card-title"></h5>
-                <p th:text="${blog.summary}"></p>
-                <p th:text="${blog.body}"></p>
-                <p th:text="${blog.dateCreated}"></p>
-            </div>
+<div class="col-sm-12 p-2" th:each="blog :${blog}">
+    <div style="text-align: center" class="card">
+        <div class="card-body">
+            <h5 th:text="${blog.title}" class="card-title"></h5>
+            <p th:text="${blog.summary}"></p>
+            <p th:text="${blog.body}"></p>
+            <p th:text="${blog.dateCreated}"></p>
         </div>
     </div>
-</le>
-<a class="button btn-secondary p-3 " style="text-decoration: none; background: green; color:whitesmoke; border-radius: 1000px"
-   th:href="@{/blogs}">Back to main home <i class="fa fa-home"></i></a>
+</div>
+<a class="button btn-secondary p-3 " style="text-decoration: none; background: green; text-align: center;
+color:whitesmoke; border-radius: 1000px" th:href="@{/blog/list}">Back to main home <i class="fa fa-home"></i></a>
 
-</center>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

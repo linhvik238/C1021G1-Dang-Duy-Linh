@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Blog</title>
+</head>
+<body>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h4>Welcome to my Blog</h4>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <a href="/" class="button p-2" style="background: aquamarine; color:gainsboro; border-radius: 100px">Display all Blogs</a>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <form action="/search" method="get">
+                <input type="text" name="title" placeholder="input title">
+                <input type="submit" value="search">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 p-3" th:each="blog : ${blogList}">
+            <div style="background: gainsboro">
+                <div class="d-flex justify-content-around">
+                    <a th:href="@{/edit/{id}(id=${blog.getId()})}"></a>
+                    <h2 th:text="${blog.category.}"
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

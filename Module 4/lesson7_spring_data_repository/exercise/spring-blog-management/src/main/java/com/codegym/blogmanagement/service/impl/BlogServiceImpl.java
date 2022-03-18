@@ -26,12 +26,23 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     @Override
-    public List<Blog> findAllByTitleContaining(String title) {
-        return repository.findAllByTitleContaining(title);
+    public Page<Blog> findAllByTitleContaining(String title, Pageable pageable) {
+        return repository.findAllByTitleContaining(title, pageable);
     }
 
     @Override
     public void deleteBlog(Long id) {
         repository.deleteById(id);
+    }
+
+    @Override
+    public void edit(Blog blog) {
+        System.out.println(122223);
+        repository.save(blog);
+    }
+
+    @Override
+    public Blog findById(Long id) {
+        return repository.findById(id).orElse(null);
     }
 }

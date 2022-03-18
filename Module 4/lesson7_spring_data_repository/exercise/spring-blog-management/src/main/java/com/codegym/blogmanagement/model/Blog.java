@@ -1,9 +1,7 @@
 package com.codegym.blogmanagement.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 @Entity
 public class Blog {
     @Id
@@ -12,10 +10,23 @@ public class Blog {
 
     private String title;
     private String summary;
+    @Column(columnDefinition = "LONGTEXT")
     private String body;
     private String dateCreated;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    private Category category;
+
     public Blog() {
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Long getId() {
