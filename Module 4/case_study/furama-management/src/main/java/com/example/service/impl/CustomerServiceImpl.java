@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public void deleteCustomer(Long id) {
-        customerRepository.deleteById(id);
+    public void deleteCustomer(Customer customer) {
+        customerRepository.delete(customer);
     }
 }

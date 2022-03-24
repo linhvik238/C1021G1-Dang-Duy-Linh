@@ -10,5 +10,5 @@ public interface ICustomerService {
     Page<Customer> customerList(Pageable pageable);
     void save(Customer customer);
     Optional<Customer> findById(Long id);
-    void deleteCustomer(Long id);
+    void deleteCustomer(Customer customer);
 }

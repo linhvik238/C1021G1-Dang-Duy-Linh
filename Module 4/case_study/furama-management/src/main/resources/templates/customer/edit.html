@@ -60,7 +60,7 @@
     <tr>
         <td>Customer Birthday</td>
         <td>
-        <input type="date" th:field="*{birthday}">
+        <input class="input" type="date" th:field="*{birthday}">
         </td>
     </tr>
     <tr>
@@ -124,6 +124,12 @@
 <footer th:replace="~{customer/promotion :: footer}">
 
 </footer>
+
+<script>
+    var today = new Date();
+    var date = today.getHours() + ':' + today.getMinutes();
+    document.getElementById("time").innerHTML = date;
+</script>
 
 <!--JS nút lên đỉnh-->
 <script>

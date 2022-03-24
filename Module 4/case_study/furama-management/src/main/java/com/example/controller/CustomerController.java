@@ -11,10 +11,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -28,12 +25,12 @@ public class CustomerController {
     @Autowired
     private ICustomerTypeService customerTypeService;
 
-    @GetMapping("/")
-    public String promotion()  {
-        return "/customer/promotion";
+    @GetMapping("/login")
+    public String login(){
+        return "login";
     }
 
-    @GetMapping ("/customer")
+    @GetMapping ("/customer/list")
     public ModelAndView findAll(@PageableDefault (size = 3) Pageable pageable) {
         return new ModelAndView ("customer/list", "customerList", customerService.customerList(pageable));
     }
@@ -57,11 +54,11 @@ public class CustomerController {
             BeanUtils.copyProperties(customerDto,customer);
             customerService.save(customer);
         }
-        return "redirect:/customer";
+        return "redirect:/customer/list";
     }
-    @GetMapping("/home")
+    @GetMapping({"/home", "/"})
     public String home() {
-        return "/customer/home";
+        return "customer/promotion";
     }
 
     @GetMapping("/edit/{id}")
@@ -87,12 +84,13 @@ public class CustomerController {
             customer.setIdCustomer(customerDto.getIdCustomer());
             customerService.save(customer);
         }
-        return "redirect:/customer";
+        return "redirect:/customer/list";
     }
 
-    @GetMapping ("/delete/{id}")
-    public String delete(@PathVariable Long id) {
-        customerService.deleteCustomer(id);
-        return "redirect:/customer";
+    @GetMapping ("/delete-customer")
+    public String delete(Customer customer, @RequestParam Long id) {
+        Optional<Customer> customerOptional = customerService.findById(id);
+        customerService.deleteCustomer(customerOptional.get());
+        return "redirect:/customer/list";
     }
 }

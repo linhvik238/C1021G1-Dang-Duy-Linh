@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.model.service;
 
 public class RentType {
     private int rentTypeId;

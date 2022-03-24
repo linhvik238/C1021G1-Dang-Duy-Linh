@@ -1,5 +1,7 @@
-package com.example.model.person;
+package com.example.model.login;
 
+import com.example.model.login.Role;
+import com.example.model.login.Username;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

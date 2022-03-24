@@ -1,7 +1,7 @@
 package com.example.service.impl;
 
-import com.example.model.person.MyUserDetail;
-import com.example.model.person.Username;
+import com.example.model.login.MyUserDetail;
+import com.example.model.login.Username;
 import com.example.repository.login.IUsernameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

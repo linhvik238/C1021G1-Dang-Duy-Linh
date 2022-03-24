@@ -1,10 +1,10 @@
 package com.example.model.person;
 
+import com.example.model.login.Username;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import net.bytebuddy.implementation.bytecode.Division;
 
 import javax.persistence.*;
-import javax.swing.text.Position;
+
 @Entity
 public class Employee {
     @Id
@@ -18,7 +18,7 @@ public class Employee {
     private String email;
     private String address;
     private String code;
-    private int salary;
+    private Integer salary;
     @ManyToOne
     @JoinColumn(name = "position_id", referencedColumnName = "idPosition")
     @JsonBackReference
@@ -42,7 +42,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Boolean gender, String name, String birthday, String idCard, String phone, String email, String address, String code, int salary, EmployeePosition employeePosition, EmployeeDivision employeeDivision, EmployeeEducationDegree employeeEducationDegree) {
+    public Employee(Boolean gender, String name, String birthday, String idCard, String phone, String email, String address, String code, Integer salary, EmployeePosition employeePosition, EmployeeDivision employeeDivision, EmployeeEducationDegree employeeEducationDegree) {
         this.gender = gender;
         this.name = name;
         this.birthday = birthday;
@@ -93,11 +93,11 @@ public class Employee {
         this.employeeEducationDegree = employeeEducationDegree;
     }
 
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Integer salary) {
         this.salary = salary;
     }
 

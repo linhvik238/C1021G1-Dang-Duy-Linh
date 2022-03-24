@@ -1,0 +1,33 @@
+weather.title = Thời tiết
+time.title = Giờ địa phương
+get-to.title = Đường đến khách sạn
+place.title = Địa Điểm tham quan 
+contact.title = Liên hệ
+new.title = Tin tức
+rate.title = Giá phòng
+lifestyle.title = Nhật ký đời sống
+work.title = Việc làm
+book.title = Đặt ngay
+home.title = Trang chủ
+employee.title = Nhân viên
+customer.title = Khách hàng
+service.title = Dịch vụ
+contract.title = Hợp đồng
+
+customerName.title = T�n kh�ch h�ng 
+birthday.title = Ng�y sinh
+id.title = Ch?ng minh nh�n d�n
+gender.title = Gi?i t�nh
+code.title = M�
+phone.title = S? ?i?n tho?i
+email.title = ??a ch? email
+address.title = ??a ch? nh�
+customerType.title = Lo?i th?
+update.title = Ch?nh s?a
+remove.title = X�a
+
+employeeName.title = T�n nh�n vi�n
+salary.title = L??ng ($)
+division.title = B? ph?n
+education.title = Tr�nh ?? h?c v?n
+position.title = V? tr�

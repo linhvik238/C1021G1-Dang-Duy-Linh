@@ -2,12 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Create Employee</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <!--CSS nút lên đỉnh-->
+    <!--CSS nút lên đỉnh-->
     <style>
+
         .input {
             border-radius: 20px;
             width: 450px;
@@ -34,7 +35,7 @@
             background-color: #555; /* Add a dark-grey background on hover */
         }
 
-        </style>
+    </style>
 </head>
 <body>
 
@@ -47,7 +48,7 @@
 </div>
 
 <div class="container">
-    <form th:action="@{/create-customer}" method="post" th:object="${customer}">
+    <form th:action="@{/create-employee}" method="post" th:object="${employee}">
         <table class="table">
             <tr>
                 <td>Name</td>
@@ -63,9 +64,9 @@
                 <td><label>Gender</label></td>
                 <td>
                     <radio>
-                    <input type="radio" th:field="*{gender}" value="true"/> Male 🙎‍♂️
+                        <input type="radio" th:field="*{gender}" value="true"/> Male 🙎‍♂️
                         <label th:text="${Male}"></label>
-                    <input type="radio" th:field="*{gender}" value="false"/> Female 🙎🏻‍♀
+                        <input type="radio" th:field="*{gender}" value="false"/> Female 🙎🏻‍♀
                         <label th:text="${Female}"></label>️
                     </radio>
                 </td>
@@ -95,7 +96,7 @@
                 </td>
             </tr>
             <tr>
-                <td><h6 style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></h6></td>
+                <td><h6  style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></h6></td>
             </tr>
             <tr>
                 <td>Email</td>
@@ -116,7 +117,16 @@
                 <td><h6  style="color: red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></h6></td>
             </tr>
             <tr>
-                <td>Customer Code</td>
+                <td>Salary ($)</td>
+                <td>
+                    <input class="input" type="text" th:field="*{salary}">
+                </td>
+            </tr>
+            <tr>
+                <td><h6  style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></h6></td>
+            </tr>
+            <tr>
+                <td>Employee Code</td>
                 <td>
                     <input class="input" type="text" th:field="*{code}">
                 </td>
@@ -125,13 +135,28 @@
                 <td><h6  style="color: red" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></h6></td>
             </tr>
             <tr>
-                <td>Customer Type</td>
+                <td>Employee Education Degree</td>
                 <td>
-                    <select class="input" class="form-control" th:field="*{customerType.idCustomerType}">
-                        <option th:each="cusType : ${customerType}" th:value="${cusType.idCustomerType}" th:text="${cusType.nameCustomerType}"></option>
+                    <select class="form-control input" th:field="*{employeeEducationDegree.idEducationDegree}">
+                        <option th:each="education : ${employeeEducation}" th:value="${education.idEducationDegree}" th:text="${education.nameEducationDegree}"></option>
                     </select>
                 </td>
-                <td><input type="submit" value="Create new Customer"></td>
+            <tr>
+                <td>Employee Position</td>
+                <td>
+                    <select class="form-control input" th:field="*{employeePosition.idPosition}">
+                        <option th:each="position : ${employeePosition}" th:value="${position.idPosition}" th:text="${position.namePosition}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Division</td>
+                <td>
+                    <select class="form-control input" th:field="*{employeeDivision.idDivision}">
+                        <option th:each="division : ${employeeDivision}" th:value="${division.idDivision}" th:text="${division.nameDivision}"></option>
+                    </select>
+                </td>
+                <td><input type="submit" value="Create new Employee"></td>
             </tr>
 
 
@@ -141,7 +166,7 @@
         </table>
     </form>
 </div>
-        <!--Nút lên đỉnh-->
+<!--Nút lên đỉnh-->
 <button style="color: white" onclick="topFunction()" id="myBtn" title="Go to top"><i
         class="material-icons">arrow_upward</i>
 </button>
@@ -150,13 +175,7 @@
 
 </footer>
 
-<script>
-    var today = new Date();
-    var date = today.getHours() + ':' + today.getMinutes();
-    document.getElementById("time").innerHTML = date;
-</script>
-
-        <!--JS nút lên đỉnh-->
+<!--JS nút lên đỉnh-->
 <script>
     mybutton = document.getElementById("myBtn");
 
@@ -177,6 +196,12 @@
     function topFunction() {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+</script>
+
+<script>
+    var today = new Date();
+    var date = today.getHours() + ':' + today.getMinutes();
+    document.getElementById("time").innerHTML = date;
 </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -1,4 +1,6 @@
-package com.example.model.person;
+package com.example.model.login;
+
+import com.example.model.person.Employee;
 
 import javax.persistence.*;
 import java.util.List;

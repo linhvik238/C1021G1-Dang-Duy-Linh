@@ -29,9 +29,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .formLogin()
-                .defaultSuccessUrl("/blog/list")
-                .permitAll()
+                .loginPage("/login")
+                .defaultSuccessUrl("/home").permitAll()
                 .and()
-                .authorizeRequests().anyRequest().authenticated();
+                .authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("customer/create", "customer/edit", "customer/list").hasRole("ADMIN")
+                .antMatchers("customer/list").hasRole("USER")
+                .antMatchers("/resources/**").permitAll()
+                .antMatchers("/css/**").permitAll()
+                .antMatchers("/img/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .logout().deleteCookies("JSESSIONID")
+                .and()
+                .rememberMe().key("uniqueAndSecret");
+
+
+
     }
 }

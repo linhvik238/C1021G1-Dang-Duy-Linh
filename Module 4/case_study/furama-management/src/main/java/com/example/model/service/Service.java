@@ -1,8 +1,8 @@
-package com.example.model;
+package com.example.model.service;
 
 public class Service {
     private int idService;
-    private String name;
+    private String serviceName;
     private int serviceArea;
     private double serviceCost;
     private int serviceMaxPeople;
@@ -16,14 +16,12 @@ public class Service {
     private double renTypeCost;
     private String serviceTypeName;
 
-
-
     public Service() {
     }
 
     public Service(int idService, String name, int serviceArea, double serviceCost, int serviceMaxPeople, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, int rentTypeId, int serviceTypeId, String rentTypeName, double renTypeCost, String serviceTypeName) {
         this.idService = idService;
-        this.name = name;
+        this.serviceName = name;
         this.serviceArea = serviceArea;
         this.serviceCost = serviceCost;
         this.serviceMaxPeople = serviceMaxPeople;
@@ -46,12 +44,12 @@ public class Service {
         this.idService = idService;
     }
 
-    public String getName() {
-        return name;
+    public String getServiceName() {
+        return serviceName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
     }
 
     public int getServiceArea() {
